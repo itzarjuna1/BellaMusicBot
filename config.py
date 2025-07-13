@@ -7,79 +7,50 @@ from pyrogram import filters
 
 load_dotenv()
 
-# Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID", None))
-API_HASH = getenv("API_HASH", None)
+# Required
+API_ID = 26950458
+API_HASH = "d818b8d530e4a9b209509815ab1b9c7c"
+BOT_TOKEN = "8023030133:AAGlaP-jDQQ3fVYMui10qyIsIfwZMSiSkPE"
+MONGO_DB_URI = "mongodb+srv://knight4563:knight4563@cluster0.a5br0se.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MUSIC_BOT_NAME = "LOVER MUSIC"
+PRIVATE_BOT_MODE = False
 
-# Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", None)
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 10000))
 
-# Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", None)
-PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
+LOGGER_ID = -1002881142866
+OWNER_ID = 7926944005
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 900))
-
-# Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", None))
-
-# Get this value from @MissRose_Bot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", None))
-
-## Fill these variables if you're deploying on heroku.
-# Your heroku app name
+# Heroku
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-# Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
-UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO",
-    "https://github.com/ARYANSONIII/BellaMusicBot",
-)
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
-GIT_TOKEN = getenv(
-    "GIT_TOKEN", None
-)  # Fill this variable if your upstream repository is private
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/code663/DAXXMUSIC")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
+GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/tabahi_tabahi")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/knight_society")
+SUPPORT_CHANNEL = "https://t.me/dark_x_knight_musiczz_support"
+SUPPORT_CHAT = "https://t.me/+DbezTihsh_VlYzY1"
 
-# Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
+AUTO_LEAVING_ASSISTANT = False
+AUTO_GCAST = False
+AUTO_GCAST_MSG = "Hello everyone! I’m online now 🤖"
 
-# Auto Gcast/Broadcast Handler (True = broadcast on , False = broadcast off During Hosting, Dont Do anything here.)
-AUTO_GCAST = os.getenv("AUTO_GCAST")
+SPOTIFY_CLIENT_ID = "1c21247d714244ddbb09925dac565aed"
+SPOTIFY_CLIENT_SECRET = "709e1a2969664491b58200860623ef19"
 
-# Auto Broadcast Message That You Want Use In Auto Broadcast In All Groups.
-AUTO_GCAST_MSG = getenv("AUTO_GCAST_MSG", "")
+SERVER_PLAYLIST_LIMIT = 50
+PLAYLIST_FETCH_LIMIT = 100
+SONG_DOWNLOAD_DURATION = 180
+SONG_DOWNLOAD_DURATION_LIMIT = 2000
 
-# Get this credentials from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "bcfe26b0ebc3428882a0b5fb3e872473")
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "907c6a054c214005aeae1fd752273cc4")
+TG_AUDIO_FILESIZE_LIMIT = 104857600
+TG_VIDEO_FILESIZE_LIMIT = 1073741824
 
+# Sessions
+STRING1 = "BQGbOzoABb-Ci3xqFpROac8kpohBmaAvXVwbH5CKeIq8_IehpzlXoDbCHey7YwojZCSXb2HTFsap-xVhRQoj43dnPAvpkt7UoB5JGjQ0mPwWkNvIfGY2l4EyLJLGP59UcphMuzJwUOoHbPuTNUilCXaQptDj_uaaiSbq96v5yLR3evWZRhmMRw0FtzAWVzlsxhHJp2NdOuyg9KRXgNkGuf8r62YhHXKiH5-YoxBNrqVfDp24kQVdaT1zK4ByNF0f8DqQTjvqktVU2_eEtviSWTsrUjvDha8UF1_bfY3UqSENeDcNA0RX1MzAQbncwb1NA6QJ7ujMtXZYwcqDKIiPTWu3T_c3EAAAAAGsmbxnAA"
+STRING2 = STRING3 = STRING4 = STRING5 = None
 
-# Maximum limit for fetching playlist's track from youtube, spotify, apple links.
-SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "50"))
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
-
-SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
-SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "2000"))
-
-# Telegram audio and video file size limit (in bytes)
-TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 104857600))
-TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
-# Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
-
-
-# Get your pyrogram v2 session from @Strinng_Session_Bot on Telegram
-STRING1 = getenv("STRING_SESSION",  None)
-STRING2 = getenv("STRING_SESSION2", None)
-STRING3 = getenv("STRING_SESSION3", None)
-STRING4 = getenv("STRING_SESSION4", None)
-STRING5 = getenv("STRING_SESSION5", None)
-
-
+# Internal
 BANNED_USERS = filters.user()
 adminlist = {}
 lyrical = {}
@@ -87,41 +58,30 @@ votemode = {}
 autoclean = []
 confirmer = {}
 
+# Image URLs
+START_IMG_URL = "https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg"
+PING_IMG_URL = "https://telegra.ph/file/29bf663a3b91c7e0086bc.jpg"
+PLAYLIST_IMG_URL = "https://telegra.ph/file/14eb59ea7d31229d8d751.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/2abd798099b17a5a9b2fb.jpg"
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/590f5404cdc7840b63a1c.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/590f5404cdc7840b63a1c.jpg"
+STREAM_IMG_URL = "https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/590f5404cdc7840b63a1c.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/5eb646ee0bf810113af22.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/61024698bfc926e95d57a.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/61024698bfc926e95d57a.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/61024698bfc926e95d57a.jpg"
 
-START_IMG_URL = getenv(
-    "START_IMG_URL", "https://te.legra.ph/file/ec19cf227791a167abedc.jpg"
-)
-PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://te.legra.ph/file/ec19cf227791a167abedc.jpg"
-)
-PLAYLIST_IMG_URL = "https://te.legra.ph/file/14eb59ea7d31229d8d751.jpg"
-STATS_IMG_URL = "https://te.legra.ph/file/ec19cf227791a167abedc.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6c66f8b192532fe758e82.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/ebc4dc6357be06e08a3ed.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/d339f390ec168c19879c6.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/ee0cd53ab73f08f4a3627.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/5f9fb5bba66021c782d96.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/affe0afec5c7ad63676a4.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/3c446e8dee78ed0ca62ff.jpg"
-
-
+# Duration calc
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
 
-
 DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
 
+# URL check
+if SUPPORT_CHANNEL and not re.match("(?:http|https)://", SUPPORT_CHANNEL):
+    raise SystemExit("[ERROR] - SUPPORT_CHANNEL must start with https://")
 
-if SUPPORT_CHANNEL:
-    if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
-        raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
-        )
-
-if SUPPORT_CHAT:
-    if not re.match("(?:http|https)://", SUPPORT_CHAT):
-        raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
-        )
+if SUPPORT_CHAT and not re.match("(?:http|https)://", SUPPORT_CHAT):
+    raise SystemExit("[ERROR] - SUPPORT_CHAT must start with https://")
