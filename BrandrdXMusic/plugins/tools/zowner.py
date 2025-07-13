@@ -12,12 +12,12 @@ from BrandrdXMusic.utils.database import add_served_chat, get_assistant
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/ec19cf227791a167abedc.jpg",
-        caption=f"""🍁 𝐏𝐀𝐇𝐋𝐄 𝐉𝐀𝐊𝐄 𝐀𝐍𝐈𝐌𝐀𝐋 𝐊𝐎 𝐏𝐀𝐏𝐀 𝐁𝐎𝐋 🍁""",
+        caption=f"""🍁 𝐏𝐀𝐇𝐋𝐄 𝐉𝐀𝐊𝐄 ɢx ᴅᴀʀᴋ ʙᴏᴛs [🇮🇳] 𝐊𝐎 𝐏𝐀𝐏𝐀 𝐁𝐎𝐋 🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🍁 sᴏᴜʀᴄᴇ 🍁", url=f"https://t.me/smartness_to_hai"
+                        "🍁 sᴏᴜʀᴄᴇ 🍁", url=f"https://t.me/dark_x_knight_musiczz_support"
                     )
                 ]
             ]
@@ -28,13 +28,13 @@ async def help(client: Client, message: Message):
 @app.on_message(filters.command("clone"))
 async def clones(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/ec19cf227791a167abedc.jpg",
+        photo=f"https://graph.org/file/452f92feccc7c876e7561-0a55895ff18663d86c.jpg",
         caption=f"""**🙂You Are Not Sudo User So You Are Not Allowed To Clone Me.**\n**😌Click Given Below Button And Host Manually Otherwise Contact Owner Or Sudo Users For Clone.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🍁 sᴏᴜʀᴄᴇ 🍁", url=f"https://t.me/smartness_to_hai"
+                        "🍁 sᴏᴜʀᴄᴇ 🍁", url=f"https://t.me/dark_x_knight_musiczz_support"
                     )
                 ]
             ]
