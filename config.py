@@ -59,7 +59,7 @@ autoclean = []
 confirmer = {}
 
 # Image URLs
-START_IMG_URL = https://graph.org/file/121bc9e109f540a8befac-c19eeddc86e8f53bcf.jpg"
+START_IMG_URL = "https://graph.org/file/121bc9e109f540a8befac-c19eeddc86e8f53bcf.jpg"
 PING_IMG_URL = "https://telegra.ph/file/29bf663a3b91c7e0086bc.jpg"
 PLAYLIST_IMG_URL = "https://telegra.ph/file/14eb59ea7d31229d8d751.jpg"
 STATS_IMG_URL = "https://telegra.ph/file/2abd798099b17a5a9b2fb.jpg"
