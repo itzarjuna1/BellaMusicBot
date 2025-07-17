@@ -10,7 +10,7 @@ load_dotenv()
 # Required
 API_ID = 26950458
 API_HASH = "d818b8d530e4a9b209509815ab1b9c7c"
-BOT_TOKEN = "8023030133:AAGlaP-jDQQ3fVYMui10qyIsIfwZMSiSkPE"
+BOT_TOKEN = "8023030133:AAHzuvmXz34QX8dV5utVo4Sg9lokWvZM13A"
 MONGO_DB_URI = "mongodb+srv://knight4563:knight4563@cluster0.a5br0se.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 MUSIC_BOT_NAME = "LOVER MUSIC"
 PRIVATE_BOT_MODE = False
